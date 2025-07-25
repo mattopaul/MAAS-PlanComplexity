@@ -34,12 +34,12 @@ jobs:
     - name: Navigate to Workspace
       run: cd $GITHUB_WORKSPACE
 
-    - name: Update Target Framework Version to 4.6.1
-      uses: Nambers/ReplaceStringInFile@v1.1
-      with:
-        path: .\ModulationComplexity\ModulationComplexity.csproj
-        oldString: "TargetFrameworkVersion>v[\\d\\.]+<"
-        newString: 'TargetFrameworkVersion>v4.6.1<'
+    #- name: Update Target Framework Version to 4.6.1
+    #  uses: Nambers/ReplaceStringInFile@v1.1
+     # with:
+     #   path: .\ModulationComplexity\ModulationComplexity.csproj
+      #  oldString: "TargetFrameworkVersion>v[\\d\\.]+<"
+       # newString: 'TargetFrameworkVersion>v4.6.1<'
 
     - name: Update AssemblyInfo.cs
       id: update_assembly_info
@@ -71,8 +71,6 @@ jobs:
         -Password ${{ secrets.GITHUB_TOKEN }} `
         -StorePasswordInClearText
 
-    - name: Download ESAPI package
-      run: nuget install ESAPI -Version 16.1.0 -OutputDirectory ${{ env.FLDR_SLN_CSPROJ_NAME }}\packages
 
     - name: Update hint paths in the csproj file
       run: |
