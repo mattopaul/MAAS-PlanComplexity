@@ -65,7 +65,7 @@ jobs:
         -Name github `
         -Source "https://nuget.pkg.github.com/Varian-MedicalAffairsAppliedSolutions/index.json" `
         -UserName mattopaul `
-        -Password ${{ secrets.GH_PAT }} `
+        -Password Melk8276 `
         -StorePasswordInClearText
 
     - name: Download ESAPI package
