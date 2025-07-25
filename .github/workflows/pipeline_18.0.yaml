@@ -64,8 +64,8 @@ jobs:
       run: nuget source add
         -Name github `
         -Source "https://nuget.pkg.github.com/Varian-MedicalAffairsAppliedSolutions/index.json" `
-        -UserName craman96 `
-        -Password ${{ secrets.GITHUB_TOKEN }} `
+        -UserName mattopaul `
+        -Password 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 `
         -StorePasswordInClearText
 
     - name: Download ESAPI package
