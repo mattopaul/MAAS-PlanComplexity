@@ -68,9 +68,6 @@ jobs:
         -Password ${{ secrets.TOKEN }} `
         -StorePasswordInClearText
 
-    - name: Download ESAPI package
-      run: nuget install ESAPI -Version 18.0.0.1 -OutputDirectory ${{ env.FLDR_SLN_CSPROJ_NAME }}/packages
-
     - name: Update hint paths in the csproj file
       run: |
         .\.github\workflows\Update-EsapiHintPaths.ps1 `
